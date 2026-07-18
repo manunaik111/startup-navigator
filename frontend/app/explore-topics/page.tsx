@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, Suspense } from "react";
 import Link from "next/link";
 import { useSearchParams, useRouter } from "next/navigation";
 import { ArrowRight } from "lucide-react";
@@ -24,7 +24,7 @@ const CATEGORIES = [
     { slug: "growth", label: "Growth" },
 ];
 
-export default function ExploreTopicsPage() {
+function ExploreTopicsContent() {
     const searchParams = useSearchParams();
     const router = useRouter();
     const activeCategory = searchParams.get("category") || "";
@@ -128,5 +128,13 @@ export default function ExploreTopicsPage() {
             </main>
             <Footer />
         </>
+    );
+}
+
+export default function ExploreTopicsPage() {
+    return (
+        <Suspense fallback={<LoadingSpinner label="Loading..." fullPage />}>
+            <ExploreTopicsContent />
+        </Suspense>
     );
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { ExternalLink, Link2 } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
@@ -23,7 +23,7 @@ const CATEGORIES = [
     { slug: "growth", label: "Growth" },
 ];
 
-export default function ResourcesPage() {
+function ResourcesContent() {
     const searchParams = useSearchParams();
     const router = useRouter();
     const activeCategory = searchParams.get("category") || "";
@@ -132,4 +132,12 @@ export default function ResourcesPage() {
             <Footer />
     </>
   );
+}
+
+export default function ResourcesPage() {
+    return (
+        <Suspense fallback={<LoadingSpinner label="Loading..." fullPage />}>
+            <ResourcesContent />
+        </Suspense>
+    );
 }
