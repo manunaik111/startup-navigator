@@ -2,10 +2,10 @@
 
 A comprehensive AI-powered web application to help entrepreneurs navigate the startup journey — covering company registration, funding, legal compliance, hiring, branding, marketing, taxation, fundraising, AI tools, and business growth.
 
-**Backend URL:** https://startup-navigator-api-dwcm.onrender.com
-**Live URL:** https://startup-navigator-omega.vercel.app/
-**GitHub Repository:** https://github.com/manunaik111/startup-navigator
-**Demo Admin Login:** `admin@startupnavigator.com` / `Admin@12345` 
+- **Backend URL:** https://startup-navigator-api-dwcm.onrender.com
+- **Live URL:** https://startup-navigator-omega.vercel.app/
+- **GitHub Repository:** https://github.com/manunaik111/startup-navigator
+- **Demo Admin Login:** `admin@startupnavigator.com` / `Admin@12345` 
 
 ---
 
