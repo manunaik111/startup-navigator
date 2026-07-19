@@ -115,8 +115,8 @@ This is genuine RAG: retrieval is a real algorithm against real data (not hardco
 
 ## AI Tools Used in Development
 
-- **Claude (Anthropic)** — used throughout for architecture planning, backend code (FastAPI, SQLAlchemy models, RAG pipeline), frontend code (Next.js/React/Tailwind components), debugging deployment and environment issues, and this README.
-- **Groq (Llama 3.3 70B)** — powers the live AI Search feature in the deployed application itself (not a dev tool — this is the product's own AI integration).
+- **Claude (Anthropic)** — used as an AI coding assistant for architecture planning, generating backend and frontend code, and debugging deployment issues throughout development.
+- **Groq (Llama 3.3 70B)** — powers the AI Search feature within the deployed application itself, using a Retrieval-Augmented Generation (RAG) pipeline.
 
 ---
 
